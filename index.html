@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karishma Pareek - Interactive Resume</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    background-color: #f4f4f5;
+    scroll-behavior: smooth;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 280px; /* reduced for mobile */
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+</style>
+
+</head>
+
+<body class="text-zinc-800">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-zinc-900 text-white z-50 shadow-md">
+<div class="max-w-7xl mx-auto px-4 md:px-6">
+<div class="flex justify-between items-center h-16">
+
+<div class="font-bold text-lg md:text-xl">K. PAREEK</div>
+
+<div class="space-x-2 md:space-x-4 text-sm md:text-base">
+<button onclick="scrollToSection('profile')" class="hover:bg-zinc-800 hover:text-amber-400 px-2 md:px-3 py-2 rounded">Profile</button>
+<button onclick="scrollToSection('metrics')" class="hover:bg-zinc-800 hover:text-amber-400 px-2 md:px-3 py-2 rounded">Skills</button>
+<button onclick="scrollToSection('journey')" class="hover:bg-zinc-800 hover:text-amber-400 px-2 md:px-3 py-2 rounded">Education</button>
+<button onclick="scrollToSection('details')" class="hover:bg-zinc-800 hover:text-amber-400 px-2 md:px-3 py-2 rounded">Details</button>
+</div>
+
+</div>
+</div>
+</nav>
+
+
+<!-- HEADER -->
+<header class="pt-28 md:pt-32 pb-16 md:pb-20 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white text-center px-4">
+
+<div class="max-w-3xl mx-auto">
+
+<img
+src="./profile.jpeg"
+alt="Karishma Pareek"
+class="w-32 h-32 md:w-44 md:h-44 object-cover rounded-full border-4 border-white shadow-xl mx-auto mb-6"
+/>
+
+<h1 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4">KARISHMA PAREEK</h1>
+
+<h2 class="text-lg md:text-2xl text-amber-400 mb-6 md:mb-8">
+Content Creator & Digital Media Enthusiast
+</h2>
+
+<div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-sm md:text-base">
+<span>📞 +91 9322371253</span>
+<span>✉️ karishmapareek775@gmail.com</span>
+<span>📍 Maharashtra</span>
+</div>
+
+</div>
+</header>
+
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 space-y-16 md:space-y-24">
+
+
+<section id="profile">
+<h2 class="text-2xl md:text-3xl font-bold mb-6 border-b-2 border-amber-400 inline-block">
+Professional Summary
+</h2>
+
+<p class="text-zinc-600 text-base md:text-lg leading-relaxed max-w-3xl">
+Recent Bachelor of Arts graduate and passionate content creator with
+an active presence on YouTube and Instagram. Skilled at creating
+engaging content and connecting with online audiences.
+</p>
+</section>
+
+
+
+<section id="metrics" class="bg-white p-6 md:p-10 rounded-xl shadow">
+
+<h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">
+Competency Dashboard
+</h2>
+
+<p class="text-center text-zinc-500 mb-6 md:mb-10 text-sm md:text-base">
+A visual overview of skills.
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+
+<div>
+<h3 class="text-lg md:text-xl font-semibold mb-4 text-center">
+Core Professional Skills
+</h3>
+
+<div class="chart-container">
+<canvas id="skillsChart"></canvas>
+</div>
+</div>
+
+<div>
+<h3 class="text-lg md:text-xl font-semibold mb-4 text-center">
+Language Proficiency
+</h3>
+
+<div class="chart-container">
+<canvas id="languageChart"></canvas>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+<section id="journey">
+<h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10 border-b-2 border-amber-400 inline-block">
+Education
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+<div class="bg-white p-5 md:p-6 rounded-xl shadow">
+<h3 class="text-lg md:text-xl font-bold">Bachelor of Arts</h3>
+<p class="text-amber-500 font-semibold mb-2">2026 • CGPA: 7.5</p>
+<p class="text-zinc-600 text-sm md:text-base">
+Completed undergraduate studies focusing on communication.
+</p>
+</div>
+
+<div class="bg-white p-5 md:p-6 rounded-xl shadow">
+<h3 class="text-lg md:text-xl font-bold">Key Strengths</h3>
+<ul class="text-zinc-600 space-y-1 text-sm md:text-base">
+<li>▪ Content Creation</li>
+<li>▪ Communication</li>
+<li>▪ Team Work</li>
+<li>▪ Adaptability</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+
+
+<section id="details">
+<h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10 border-b-2 border-amber-400 inline-block">
+Profile Details
+</h2>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+
+<div class="bg-zinc-200 p-4 md:p-6 rounded text-center">
+<div class="text-xs md:text-sm text-zinc-500">DOB</div>
+<div class="font-bold text-sm md:text-lg">07 July 2005</div>
+</div>
+
+<div class="bg-zinc-200 p-4 md:p-6 rounded text-center">
+<div class="text-xs md:text-sm text-zinc-500">Location</div>
+<div class="font-bold text-sm md:text-lg">Maharashtra</div>
+</div>
+
+<div class="bg-zinc-200 p-4 md:p-6 rounded text-center">
+<div class="text-xs md:text-sm text-zinc-500">Field</div>
+<div class="font-bold text-sm md:text-lg">Digital Media</div>
+</div>
+
+<div class="bg-zinc-200 p-4 md:p-6 rounded text-center">
+<div class="text-xs md:text-sm text-zinc-500">Status</div>
+<div class="font-bold text-sm md:text-lg">Open</div>
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer class="bg-zinc-900 text-zinc-400 text-center py-4 md:py-6 text-sm">
+© 2026 Karishma Pareek
+</footer>
+
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}
+
+new Chart(document.getElementById('skillsChart'),{
+type:'radar',
+data:{
+labels:['Communication','Teamwork','Content','Adaptability','Problem Solving','Decision'],
+datasets:[{
+data:[92,88,90,85,86,84],
+backgroundColor:'rgba(245,158,11,0.3)',
+borderColor:'#f59e0b'
+}]
+},
+options:{plugins:{legend:{display:false}}, responsive:true}
+});
+
+new Chart(document.getElementById('languageChart'),{
+type:'bar',
+data:{
+labels:['Hindi','English','Marathi'],
+datasets:[{data:[98,95,90],backgroundColor:'#f59e0b'}]
+},
+options:{indexAxis:'y', responsive:true}
+});
+</script>
+
+</body>
+</html>
